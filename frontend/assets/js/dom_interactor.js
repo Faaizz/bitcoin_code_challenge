@@ -34,7 +34,7 @@ $(function(){
      * Make inital plot with from-date set to 10 days ago, and to-date set to 
      * current date
      */
-    makeInitialPlot(chart_canvas); 
+    makePlot(chart_canvas, getIsoDate(date_10ago), getIsoDate(date_today)); 
 
 
     /**
@@ -46,7 +46,6 @@ $(function(){
         minDate: date_10ago,
         maxDate: date_today,
         onSelect: function(date){
-            console.log(getIsoDate(date));
             from_date_input.value = date;
             // Set minimum date on "to-date" to selected "from-date" and clear selection on "to-date"
             to_date_picker.setOptions({...to_date_picker_options, minDate: date});
@@ -65,7 +64,6 @@ $(function(){
         minDate: date_10ago,
         maxDate: date_today,
         onSelect: function(date){
-            console.log(getIsoDate(date));
             to_date_input.value = date;
             // Set maximum date on "from-date" to selected "to-date"
             from_date_picker.setOptions({...from_date_picker_options, maxDate: date});
@@ -80,7 +78,8 @@ $(function(){
      */
     $(render_btn).on("click", ()=>{
         // Collect new dates and Update plot
-        updatePlot(
+        makePlot(
+            chart_canvas,
             getIsoDate(from_date_picker.getDate()), 
             getIsoDate(to_date_picker.getDate())
         );  
