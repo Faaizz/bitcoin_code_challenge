@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BitcoinPricePHP</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!--CONTAINER-->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+
+        <!--CARD-->
+        <div class="card" id="out_div">
+
+            <!--CARD BODY-->
+            <div class="card-body shadow px-5" id="out_body">
+
+                <!--HEADING-->
+                <h1 class="text-center text-primary my-4">Bitcoin Price</h1>
+
+                <!--INPUTS AND RENDER BUTTON-->
+                <div class="row d-flex justify-content-center">
+                    <!--FROM DATE-->
+                    <div class="col-10 col-sm-6 col-lg-4">
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend"><span class="input-group-text">From</span></div><input class="form-control" type="text" id="from_date">
+                        </div>
+                    </div>
+                    <!--END: FROM DATE-->
+                    <!--TO DATE-->
+                    <div class="col-10 col-sm-6 col-lg-4">
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend"><span class="input-group-text">To</span></div><input class="form-control" type="text" id="to_date">
+                        </div>
+                    </div>
+                    <!--END: TO DATE-->
+                    <!--RENDER-->
+                    <div class="col-10 col-sm-6 col-lg-4">
+                        <button class="btn btn-primary btn-block" id="render_btn">Render</button>
+                    </div>
+                </div>
+                <!--END: INPUTS AND RENDER BUTTON-->
+                
+                <!--CHART CANVAS-->
+                <canvas id="myChart" class="w-100"></canvas>
+                <!--END: CHART CANVAS-->
+                
+            </div>
+            <!--END: CARD BODY-->
+
+        </div>
+        <!--END: CARD-->
+
+    </div>
+    <!--END: CONTAINER-->
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.js"></script>
+    <script src="assets/js/misc_functions.js"></script>
+    <script src="assets/js/dom_iteractor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</body>
+
+</html>
