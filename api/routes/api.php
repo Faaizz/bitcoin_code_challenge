@@ -16,3 +16,9 @@ use App\Http\Controllers\DataController;
 */
 
 Route::post("/bitcoin", [DataController::class, 'data']);
+
+Route::fallback(function () {
+    return response()->json([
+        "msg": "Page not found"
+    ], 404);
+});
